@@ -1,0 +1,689 @@
+[{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.Cubo_EMB.View.sql",
+
+"case":["CASE WHEN ed.MovPorcentaje IS NULL THEN  0 ELSE (ed.MovPorcentaje/100) * (em.Importe) END","CASE WHEN ed.MovPorcentaje IS NULL THEN em.Importe ELSE 0 END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.Cubo_RETARDO.View.sql",
+
+"case":["CASE WHEN CuboPersonalRegistro.Registro > '9:00' OR CuboPersonalRegistro.Registro IS NULL THEN 1 ELSE 0 END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.FN_DM0269DatosSPRutaRepartoChoferes.UserDefinedFunction.sql",
+
+"case":["Case When Ve.Poblacion Is Null Or VE.Poblacion =' ' Then C.Poblacion Else VE.Poblacion End"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.MFACompraPreCalc.View.sql",
+
+"case":["CASE MFAArtAF.Articulo WHEN NULL THEN 0 ELSE 1 END","CASE MFAArtAF.Articulo WHEN NULL THEN NULL ELSE MFAActivoFCat.Tipo END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.MFACompraPreCalc2.View.sql",
+
+"case":["CASE MFAArtAF.Articulo WHEN NULL THEN 0 ELSE 1 END","CASE MFAArtAF.Articulo WHEN NULL THEN NULL ELSE MFAActivoFCat.Tipo END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.MFAGastoDineroPreCalc.View.sql",
+
+"case":["CASE WHEN NULLIF(gd.Impuestos2,0.0) IS NULL THEN NULL ELSE  gd.Impuesto2 END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.MFAGastoPreCalc.View.sql",
+
+"case":["CASE WHEN NULLIF(gd.Impuestos2,0.0) IS NULL THEN NULL ELSE  gd.Impuesto2 END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.MFANotaPreCalc.View.sql",
+
+"case":["CASE MFAArtAF.Articulo WHEN NULL THEN 0 ELSE 1 END","CASE MFAArtAF.Articulo WHEN NULL THEN NULL ELSE MFAActivoFCat.Tipo END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.MFAVentaPreCalc.View.sql",
+
+"case":["CASE MFAArtAF.Articulo WHEN NULL THEN 0 ELSE 1 END","CASE MFAArtAF.Articulo WHEN NULL THEN NULL ELSE MFAActivoFCat.Tipo END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.MFAVentaPreCalc2.View.sql",
+
+"case":["CASE MFAArtAF.Articulo WHEN NULL THEN 0 ELSE 1 END","CASE MFAArtAF.Articulo WHEN NULL THEN NULL ELSE MFAActivoFCat.Tipo END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SpAAEA00030_MisClientes.StoredProcedure.sql",
+
+"case":["CASE WHEN NIP IS NULL OR ISNULL(DocumentoValidado,0)=0 THEN '',422'' ELSE '''' END","CASE WHEN Compania IS NULL OR Compania ='''' THEN '',423'' ELSE '''' END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spActivoF.StoredProcedure.sql",
+
+"case":["CASE WHEN @Accion = 'CANCELAR' THEN NULL ELSE AdquisicionFecha END, AdquisicionFechaF = CASE WHEN @Accion = 'CANCELAR' THEN NULL ELSE AdquisicionFechaF END, AdquisicionFechaF2 = CASE WHEN @Accion = 'CANCELAR' THEN NULL ELSE AdquisicionFechaF2 END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spActivoFijoAfectar.StoredProcedure.sql",
+
+"case":["CASE WHEN @EsDevolucion = 0 THEN @Personal ELSE NULL END","CASE WHEN @EsDevolucion = 0 THEN @Espacio  ELSE NULL END","CASE WHEN @EsDevolucion = 0 THEN @ContUso  ELSE NULL END","CASE WHEN @EsDevolucion = 0 THEN @ContUso2  ELSE NULL END","CASE WHEN @EsDevolucion = 0 THEN @ContUso3  ELSE NULL END","CASE WHEN UltimoCambio IS NULL THEN */@FechaRegistro /*ELSE UltimoCambio END","CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @EstatusNuevo = 'CANCELADO' SELECT @FechaCancelacion = @FechaRegistro ELSE SELECT @FechaCancelacion = NULL","IF @EstatusNuevo <> 'CANCELADO' SELECT @FechaConclusion  = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spActualizaComprobantes.StoredProcedure.sql",
+
+"case":["CASE WHEN dbo.fnBuscaClaveMoneda(D.Moneda) IS NULL THEN NULL ELSE ISNULL(D.TipoCambio,NULL) END","CASE WHEN dbo.fnBuscaClaveMoneda(D.Moneda) IS NULL THEN NULL ELSE ISNULL(D.TipoCambio,NULL) END","CASE WHEN dbo.fnBuscaClaveMoneda(D.Moneda) IS NULL THEN NULL ELSE ISNULL(D.TipoCambio,NULL) END","CASE WHEN dbo.fnBuscaClaveMoneda(D.Moneda) IS NULL THEN NULL ELSE ISNULL(D.TipoCambio,NULL) END","CASE WHEN dbo.fnBuscaClaveMoneda(D.Moneda) IS NULL THEN NULL ELSE ISNULL(D.TipoCambio,NULL) END","CASE WHEN dbo.fnBuscaClaveMoneda(D.Moneda) IS NULL THEN NULL ELSE ISNULL(D.TipoCambio,NULL) END","CASE WHEN dbo.fnBuscaClaveMoneda(B.Moneda) IS NULL THEN NULL ELSE ISNULL(B.TipoCambio,NULL) END","CASE WHEN dbo.fnBuscaClaveMoneda(B.Moneda) IS NULL THEN NULL ELSE ISNULL(B.TipoCambio, NULL) END","CASE WHEN dbo.fnBuscaClaveMoneda(B.Moneda) IS NULL THEN NULL ELSE ISNULL(B.TipoCambio, NULL) END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SpActualizaTablaContMavi.StoredProcedure.sql",
+
+"case":["Case When @FechaNacimiento='12/30/1899' then NULL Else @FechaNacimiento End","Case When @FechaNacimiento='12/30/1899' then NULL Else @FechaNacimiento End"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spApp_GenChecador.StoredProcedure.sql",
+
+"case":["CASE WHEN @Sucursal IS NULL THEN Sucursal ELSE @Sucursal END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spAsisteAfectar.StoredProcedure.sql",
+
+"case":["CASE WHEN FechaInicio IS NULL AND ISNULL(@ActividadAvance, 0) > 0 THEN @FechaEmision ELSE FechaInicio END","CASE WHEN UltimoCambio IS NULL THEN */@FechaRegistro /*ELSE UltimoCambio END","CASE WHEN @Estatus <> @EstatusNuevo THEN NULL ELSE Situacion END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @EstatusNuevo = 'CANCELADO' SELECT @FechaCancelacion = @FechaRegistro ELSE SELECT @FechaCancelacion = NULL","IF @EstatusNuevo <> 'CANCELADO' SELECT @FechaConclusion  = NULL","IF @OrigenEstatus = 'CANCELADO' SELECT @FechaCancelacion = @FechaRegistro ELSE SELECT @FechaCancelacion = NULL","IF @OrigenEstatus <> 'CANCELADO' SELECT @FechaConclusion  = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spAspelInsertaClientes.StoredProcedure.sql",
+
+"case":["CASE WHEN CONVERT(real, Factor) = 0 THEN NULL ELSE Factor END"],
+
+"compare":{"where":["WHERE Campo = 'Cliente' AND A.Grupo <> '' AND B.Grupo = NULL"],"and":["AND B.Grupo = NULL"],"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spAspelInsertaProveedores.StoredProcedure.sql",
+
+"case":["CASE WHEN CONVERT(real, Factor) = 0 THEN NULL ELSE Factor END"],
+
+"compare":{"where":["WHERE Campo = 'Proveedor' AND A.Familia <> '' AND B.Familia = NULL"],"and":["AND B.Familia = NULL"],"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spAuditoriaSaldo.StoredProcedure.sql",
+
+"case":["CASE WHEN @ClienteD IS NULL THEN @ProvD ELSE @ClienteD END","CASE WHEN @ClienteD IS NULL THEN @ProvA ELSE @ClienteA END","CASE WHEN @ClienteD IS NULL THEN @ProvD ELSE @ClienteD END","CASE WHEN @ClienteD IS NULL THEN @ProvA ELSE @ClienteA END"],
+
+"compare":{"where":null,"and":["AND @ClienteA = NULL","AND @ProvA = NULL"],"or":null,"if":["IF UPPER(@ClienteD) IN ('0', 'NULL', '(TODOS)') SELECT @ClienteD = NULL","IF UPPER(@ProvD)    IN ('0', 'NULL', '(TODOS)') SELECT @ProvD = NULL","IF @ContactoTipo = 'Cliente' AND @ClienteD = NULL","IF @ContactoTipo = 'Proveedor' AND @ProvD = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCambioAfectar.StoredProcedure.sql",
+
+"case":["CASE WHEN UltimoCambio IS NULL THEN */@FechaRegistro /*ELSE UltimoCambio END","CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @EstatusNuevo = 'CANCELADO' SELECT @FechaCancelacion = @FechaRegistro ELSE SELECT @FechaCancelacion = NULL","IF @EstatusNuevo <> 'CANCELADO' SELECT @FechaConclusion  = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCFD.StoredProcedure.sql",
+
+"case":["CASE WHEN cfg.CadenaOriginal8000 = 1 THEN @CadenaOriginal1 ELSE NULL END","CASE WHEN cfg.CadenaOriginal8000 = 1 THEN @CadenaOriginal2 ELSE NULL END","CASE WHEN cfg.CadenaOriginal8000 = 1 THEN @CadenaOriginal3 ELSE NULL END","CASE WHEN cfg.CadenaOriginal8000 = 1 THEN @CadenaOriginal4 ELSE NULL END","CASE WHEN cfg.CadenaOriginal8000 = 1 THEN @CadenaOriginal5 ELSE NULL END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCFDDetallista.StoredProcedure.sql",
+
+"case":["CASE WHEN VersionFecha < @Fecha OR VersionFecha IS NULL THEN Version ELSE VersionAnterior END","CASE WHEN versionFecha<@Fecha OR versionFecha IS NULL THEN version ELSE versionAnterior END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCFDFlexGenerarPDF.StoredProcedure.sql",
+
+"case":["CASE WHEN (@AlmacenarPDF = 1) AND (@PDFExiste = 0) AND NULLIF(@Reporte,'') IS NOT NULL THEN '<![CDATA[ReportePDF(' + CHAR(39) + @Reporte + CHAR(39) + ',' + CONVERT(varchar,ISNULL(@ID,0)) + ',' + '<T>' + @Archivo + '<T>' + ')]]>' ELSE 'Asigna(Temp.Num,Temp.Num)' END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCFDSorianaConsolidado.StoredProcedure.sql",
+
+"case":["CASE WHEN VersionFecha < @Fecha OR VersionFecha IS NULL THEN Version ELSE VersionAnterior END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spComCobLocalizaciones.StoredProcedure.sql",
+
+"case":["CASE WHEN @PorcDes IN (NULL, 0) THEN 1 ELSE @PorcDes/100 END","CASE WHEN @PorcLPP IN (NULL, 0) THEN 1 ELSE @PorcLPP/100 END","CASE WHEN @PorcPlaMaxExi IN (NULL, 0) THEN 1 ELSE @PorcPlaMaxExi/100 END","CASE WHEN @PorcDes IN (NULL, 0) THEN 1 ELSE @PorcDes/100 END","CASE WHEN @PorcLPP IN (NULL, 0) THEN 1 ELSE @PorcLPP/100 END","CASE WHEN @PorcPlaMaxExi IN (NULL, 0) THEN 1 ELSE @PorcPlaMaxExi/100 END","CASE WHEN @PorcDes IN (NULL, 0) THEN 1 ELSE @PorcDes/100 END","CASE WHEN @PorcLPP IN (NULL, 0) THEN 1 ELSE @PorcLPP/100 END","CASE WHEN @PorcPlaMaxExi IN (NULL, 0) THEN 1 ELSE @PorcPlaMaxExi/100 END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spContSATGenerarXml.StoredProcedure.sql",
+
+"case":["CASE WHEN @TipoSolicitud IN ('AF','FC') THEN @NumeroSolicitud ELSE NULL END","CASE WHEN @TipoSolicitud IN ('DE','CO') THEN @NumeroSolicitud ELSE NULL END","CASE WHEN Comp.Moneda = 'MXN' THEN NULL ELSE Comp.TipoCambio END","CASE WHEN CFDCBB.Moneda = 'MXN' THEN NULL ELSE CFDCBB.TipoCambio END","CASE WHEN CompExt.Moneda = 'MXN' THEN NULL ELSE CompExt.TipoCambio END","CASE WHEN Cta.ClaveSAT = '102.02' THEN NULL ELSE REPLICATE('0',(3-LEN(InstFin.ClaveSAT)))+CAST(InstFin.ClaveSAT as varchar(3)) END","CASE WHEN Cta.ClaveSAT = '102.02' THEN REPLICATE('0',(3-LEN(InstFin.ClaveSAT)))+CAST(InstFin.ClaveSAT as varchar(3)) ELSE NULL END","CASE WHEN Cta.ClaveSAT = '102.02' THEN NULL ELSE REPLICATE('0',(3-LEN(InstFin.ClaveSAT)))+CAST(InstFin.ClaveSAT as varchar(3)) END","CASE WHEN Cta.ClaveSAT = '102.02' THEN REPLICATE('0',(3-LEN(InstFin.ClaveSAT)))+CAST(InstFin.ClaveSAT as varchar(3)) ELSE NULL END","CASE WHEN Cta2.ClaveSAT = '102.02' THEN NULL ELSE REPLICATE('0',(3-LEN(InstFin2.ClaveSAT)))+CAST(InstFin2.ClaveSAT as varchar(3)) END","CASE WHEN Cta2.ClaveSAT = '102.02' THEN REPLICATE('0',(3-LEN(InstFin2.ClaveSAT)))+CAST(InstFin2.ClaveSAT as varchar(3)) ELSE NULL END","CASE WHEN NULLIF(Trans.Moneda,'MXN') = 'MXN' THEN NULL ELSE Trans.TipoCambio END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCorteCxcEstadoCuentaSimple.StoredProcedure.sql",
+
+"case":["CASE WHEN InfoMoneda = '(Todas)' THEN NULL WHEN RTRIM(InfoMoneda) = '' THEN NULL ELSE InfoMoneda END","CASE WHEN Cte.CreditoConLimite = 1 THEN ISNULL(Cte.CreditoLimite,0.0) ELSE NULL END","CASE WHEN cc.ConLimiteCredito = 1 THEN ISNULL(cc.LimiteCredito,0.0) ELSE NULL END","CASE WHEN Cte.CreditoConLimite = 1 THEN ISNULL(Cte.CreditoMoneda,'') ELSE NULL END","CASE WHEN cc.ConLimiteCredito = 1 THEN ISNULL(cc.MonedaCredito,'') ELSE NULL END","CASE WHEN Cte.CreditoConCondiciones = 1 THEN NULLIF(Cte.CreditoCondiciones,'') ELSE NULL END","CASE WHEN cc.ConCondiciones = 1 THEN NULLIF(cc.Condiciones,'') ELSE CONVERT(varchar,NULL) END","CASE WHEN Cte.CreditoConDias = 1 THEN ISNULL(Cte.CreditoDias,0) ELSE CONVERT(int,NULL) END","CASE WHEN cc.ConDias = 1 THEN ISNULL(cc.Dias,0) ELSE CONVERT(int,NULL) END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCorteCxpEstadoCuentaSimple.StoredProcedure.sql",
+
+"case":["CASE WHEN InfoMoneda = '(Todas)' THEN NULL WHEN RTRIM(InfoMoneda) = '' THEN NULL ELSE InfoMoneda END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCorteGenerarEstadoCuentaSimple.StoredProcedure.sql",
+
+"case":["CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @CuentaD = '0' SELECT @CuentaD = NULL","IF @CuentaD = '' SELECT @CuentaD = NULL","IF @CuentaD IN ('', '(Todos)') SELECT @CuentaD = NULL","IF @CuentaA = '0' SELECT @CuentaA = NULL","IF @CuentaA = '' SELECT @CuentaA = NULL","IF @CuentaA IN ('', '(Todos)') SELECT @CuentaA = NULL","IF @Sucursal = -1 SELECT @Sucursal = NULL","IF @EstatusEspecifico = '0' SELECT @EstatusEspecifico = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCorteInvVal.StoredProcedure.sql",
+
+"case":["CASE WHEN InfoAlmacen IN('', '(Todos)', '(Todas)') THEN NULL ELSE InfoAlmacen END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCorteInvValOtraMoneda.StoredProcedure.sql",
+
+"case":["CASE WHEN NULLIF(InfoArticuloD, '') IS NULL THEN (SELECT MIN(Articulo) FROM Art) ELSE NULLIF(InfoArticuloD, '') END","CASE WHEN NULLIF(InfoArticuloA, '') IS NULL THEN (SELECT MAX(Articulo) FROM Art) ELSE NULLIF(InfoArticuloA, '') END","CASE WHEN InfoSucursal IN(NULL, '') THEN NULL ELSE InfoSucursal END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCPReporte.StoredProcedure.sql",
+
+"case":["CASE WHEN @ID IS NULL THEN 'CP.OP' ELSE mt.Clave END","CASE WHEN ISNULL(SUM(CONVERT(money,Columna2)),0) <> 0 THEN ISNULL(SUM(CONVERT(money,Columna2)),0) ELSE NULL END, CASE WHEN ISNULL(SUM(CONVERT(money,Columna3)),0) <> 0 THEN ISNULL(SUM(CONVERT(money,Columna3)),0) ELSE NULL END, CASE WHEN ISNULL(SUM(CONVERT(money,Columna4)),0) <> 0 THEN ISNULL(SUM(CONVERT(money,Columna4)),0) ELSE NULL END","CASE WHEN ISNULL(SUM(CONVERT(money,Columna5)),0) <> 0 THEN ISNULL(SUM(CONVERT(money,Columna5)),0) ELSE NULL END, CASE WHEN ISNULL(SUM(CONVERT(money,Columna6)),0) <> 0 THEN ISNULL(SUM(CONVERT(money,Columna6)),0) ELSE NULL END, CASE WHEN ISNULL(SUM(CONVERT(money,Columna7)),0) <> 0 THEN ISNULL(SUM(CONVERT(money,Columna7)),0) ELSE NULL END","CASE WHEN ISNULL(SUM(CONVERT(money,Columna8)),0) <> 0 THEN ISNULL(SUM(CONVERT(money,Columna8)),0) ELSE NULL END, CASE WHEN ISNULL(SUM(CONVERT(money,Columna9)),0) <> 0 THEN ISNULL(SUM(CONVERT(money,Columna9)),0) ELSE NULL END, CASE WHEN ISNULL(SUM(CONVERT(money,Columna10)),0) <> 0 THEN ISNULL(SUM(CONVERT(money,Columna10)),0) ELSE NULL END","CASE WHEN ISNULL(SUM(CONVERT(money,Columna11)),0) <> 0 THEN ISNULL(SUM(CONVERT(money,Columna11)),0) ELSE NULL END","CASE WHEN ISNULL(SUM(CONVERT(money,Columna12)),0) <> 0 THEN ISNULL(SUM(CONVERT(money,Columna12)),0) ELSE NULL END","CASE WHEN @Columna2  IS NOT NULL AND @MovTipo = 'CP.OP' THEN (SELECT CONVERT(varchar, ISNULL(CONVERT(money,Columna2 ),0), 1) FROM @Tabla WHERE ID = @IDTabla) ELSE Columna2 END","CASE WHEN @Columna3  IS NOT NULL THEN (SELECT CONVERT(varchar, ISNULL(CONVERT(money,Columna3 ),0), 1) FROM @Tabla WHERE ID = @IDTabla) ELSE NULL END","CASE WHEN @Columna4  IS NOT NULL THEN (SELECT CONVERT(varchar, ISNULL(CONVERT(money,Columna4 ),0), 1) FROM @Tabla WHERE ID = @IDTabla) ELSE NULL END","CASE WHEN @Columna5  IS NOT NULL THEN (SELECT CONVERT(varchar, ISNULL(CONVERT(money,Columna5 ),0), 1) FROM @Tabla WHERE ID = @IDTabla) ELSE NULL END","CASE WHEN @Columna6  IS NOT NULL THEN (SELECT CONVERT(varchar, ISNULL(CONVERT(money,Columna6 ),0), 1) FROM @Tabla WHERE ID = @IDTabla) ELSE NULL END","CASE WHEN @Columna7  IS NOT NULL THEN (SELECT CONVERT(varchar, ISNULL(CONVERT(money,Columna7 ),0), 1) FROM @Tabla WHERE ID = @IDTabla) ELSE NULL END","CASE WHEN @Columna8  IS NOT NULL THEN (SELECT CONVERT(varchar, ISNULL(CONVERT(money,Columna8 ),0), 1) FROM @Tabla WHERE ID = @IDTabla) ELSE NULL END","CASE WHEN @Columna9  IS NOT NULL THEN (SELECT CONVERT(varchar, ISNULL(CONVERT(money,Columna9 ),0), 1) FROM @Tabla WHERE ID = @IDTabla) ELSE NULL END","CASE WHEN @Columna10 IS NOT NULL THEN (SELECT CONVERT(varchar, ISNULL(CONVERT(money,Columna10),0), 1) FROM @Tabla WHERE ID = @IDTabla) ELSE NULL END","CASE WHEN @Columna11 IS NOT NULL THEN (SELECT CONVERT(varchar, ISNULL(CONVERT(money,Columna11),0), 1) FROM @Tabla WHERE ID = @IDTabla) ELSE NULL END","CASE WHEN @Columna12 IS NOT NULL THEN (SELECT CONVERT(varchar, ISNULL(CONVERT(money,Columna12),0), 1) FROM @Tabla WHERE ID = @IDTabla) ELSE NULL END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @ClaveD = NULL","IF @ClaveA = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCRAfectar.StoredProcedure.sql",
+
+"case":["CASE WHEN UltimoCambio IS NULL THEN */@FechaRegistro /*ELSE UltimoCambio END","CASE WHEN @Estatus <> @EstatusNuevo THEN NULL ELSE Situacion END"],
+
+"compare":{"where":null,"and":["AND 81000 SELECT @Ok = NULL","AND 81000 SELECT @Ok = NULL"],"or":null,"if":["IF @Ok IN (80030) SELECT @Ok = NULL","IF @Ok IN (21010, 21020, 80030) SELECT @Ok = NULL","IF @Ok IN (80030) SELECT @Ok = NULL","IF @Ok BETWEEN 80030 AND 81000 SELECT @Ok = NULL","IF @Ok BETWEEN 80030 AND 81000 SELECT @Ok = NULL","IF @Ok IN (80030, 80070) SELECT @Ok = NULL","IF @Ok IN (80030) SELECT @Ok = NULL","IF @Ok IN (80030) SELECT @Ok = NULL","IF @EstatusNuevo = 'CANCELADO' SELECT @FechaCancelacion = @FechaRegistro ELSE SELECT @FechaCancelacion = NULL","IF @EstatusNuevo <> 'CANCELADO' SELECT @FechaConclusion  = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SpCREDIExploradorBoleta.StoredProcedure.sql",
+
+"case":["CASE WHEN Doc.Validado IS NULL THEN '''' ELSE CASE WHEN Doc.Validado  = 1 THEN ''POSITIVO'' ELSE ''NEGATIVO'' END END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCreditoAfectar.StoredProcedure.sql",
+
+"case":["CASE WHEN UltimoCambio IS NULL THEN @FechaRegistro ELSE UltimoCambio END","CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @Ok = 80030 SELECT @Ok = NULL","IF @EstatusNuevo = 'CANCELADO' SELECT @FechaCancelacion = @FechaRegistro ELSE SELECT @FechaCancelacion = NULL","IF @EstatusNuevo <> 'CANCELADO' SELECT @FechaConclusion  = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCtaIncMigraMaviCob.StoredProcedure.sql",
+
+"case":["CASE WHEN mov not like ('nota cargo%') Then @ID  else NULL end","CASE WHEN mov  like ('nota cargo%') Then @ID  else NULL end","CASE WHEN mov not like ('nota cargo%') Then @ID  else NULL end","CASE WHEN mov  like ('nota cargo%') Then @ID  else NULL end"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCxAfectar.StoredProcedure.sql",
+
+"case":["CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END","CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END","CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @MovAplicaEstatus <> 'CANCELADO' SELECT @FechaConclusion  = NULL","IF @EstatusNuevo = 'CANCELADO' SELECT @FechaCancelacion = @FechaRegistro ELSE SELECT @FechaCancelacion = NULL","IF @EstatusNuevo <> 'CANCELADO' SELECT @FechaConclusion  = NULL","IF @SaldoNuevo = 0.0 SELECT @SaldoNuevo = NULL","IF @GenerarEstatus <> 'CANCELADO' SELECT @FechaConclusion = NULL","IF @Ok = 80030 SELECT @Ok = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SpCXCReporteAsignacionDIMA.StoredProcedure.sql",
+
+"case":["CASE WHEN Lada IS NULL THEN '''' ELSE '' '' END","CASE WHEN Lada IS NULL THEN '''' ELSE '' '' END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spDineroAfectar.StoredProcedure.sql",
+
+"case":["CASE WHEN UltimoCambio IS NULL THEN */@FechaRegistro /*ELSE UltimoCambio END","CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END"],
+
+"compare":{"where":null,"and":["AND @Accion = 'CANCELAR' SELECT @Ok = NULL","AND @Accion = 'CANCELAR' SELECT @Ok = NULL","AND @Accion = 'CANCELAR' SELECT @Ok = NULL","AND @Accion = 'CANCELAR' SELECT @Ok = NULL"],"or":null,"if":["IF @Accion = 'CANCELAR' SELECT @CajeroActual = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = 60060 AND @Accion = 'CANCELAR' SELECT @Ok = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = 60060 AND @Accion = 'CANCELAR' SELECT @Ok = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = 60060 AND @Accion = 'CANCELAR' SELECT @Ok = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = 60060 AND @Accion = 'CANCELAR' SELECT @Ok = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @EstatusNuevo = 'CANCELADO' SELECT @FechaCancelacion = @FechaRegistro ELSE SELECT @FechaCancelacion = NULL","IF @EstatusNuevo <> 'CANCELADO' SELECT @FechaConclusion  = NULL","IF @SaldoNuevo = 0.0 SELECT @SaldoNuevo = NULL","IF @GenerarEstatus <> 'CANCELADO' SELECT @FechaConclusion = NULL","IF @Ok = 80030 SELECT @Ok = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spDocAuto.StoredProcedure.sql",
+
+"case":["CASE @Modulo WHEN 'CXC' THEN NULLIF(RTRIM(CxcDocAnticipoAutoFolio), '') WHEN 'CXP' THEN NULLIF(RTRIM(CxpDocAnticipoAutoFolio), '') ELSE NULL END","CASE @Modulo WHEN 'CXC' THEN NULLIF(RTRIM(CxcDocAutoFolio), '') WHEN 'CXP' THEN NULLIF(RTRIM(CxpDocAutoFolio), '') ELSE NULL END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @Mov = @DocAutoFolio SELECT @DocMovID = RTRIM(@MovID)+'-'+LTRIM(CONVERT(char, @a)) ELSE SELECT @DocMovID = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SpEACD00001_CargaDocAdjuntos.StoredProcedure.sql",
+
+"case":["CASE WHEN C.ClienteEnviarA IS NULL THEN 0 ELSE C.ClienteEnviarA END","CASE WHEN [TICKET] IS NULL THEN 0 ELSE 1 END","CASE WHEN [VOUCHER] IS NULL THEN 0 ELSE 1 END","CASE WHEN [IDENTIFICACION] IS NULL THEN 0 ELSE 1 END","CASE WHEN [IDENTIFICACION REVERSO] IS NULL THEN 0 ELSE 1 END","CASE WHEN [FACTURA] IS NULL THEN 0 ELSE 1 END","CASE WHEN [FACTURA VIU] IS NULL THEN 0 ELSE 1 END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spEmbarqueAfectar.StoredProcedure.sql",
+
+"case":["CASE WHEN UltimoCambio IS NULL THEN */@FechaRegistro /*ELSE UltimoCambio END","CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @Ok = 80030 SELECT @Ok = NULL","IF @EstatusNuevo = 'CANCELADO' SELECT @FechaCancelacion = @FechaRegistro ELSE SELECT @FechaCancelacion = NULL","IF @EstatusNuevo <> 'CANCELADO' SELECT @FechaConclusion  = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spEnviarCtasMaviCob.StoredProcedure.sql",
+
+"case":["CASE WHEN MOV IN ('Nota Cargo','Nota CARGO VIU') THEN NULL ELSE Agente END","CASE WHEN MOV IN ('Nota Cargo','Nota CARGO VIU') THEN NULL ELSE Agente END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spGastoAfectar.StoredProcedure.sql",
+
+"case":["CASE WHEN UltimoCambio IS NULL THEN @FechaRegistro ELSE UltimoCambio END","CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END"],
+
+"compare":{"where":null,"and":["AND @OrigenMovTipo IN ('GAS.GP', 'GAS.CP', 'GAS.DGP') SELECT @Ok = NULL"],"or":null,"if":["IF @Ok = 60300 AND @Accion = 'CANCELAR' AND @OrigenMovTipo IN ('GAS.GP', 'GAS.CP', 'GAS.DGP') SELECT @Ok = NULL","IF @CP = 0 SELECT @ClavePresupuestalImpuesto1 = NULL","IF @EstatusNuevo = 'CANCELADO' SELECT @FechaCancelacion = @FechaRegistro, @Saldo = NULL","IF @EstatusNuevo <> 'CANCELADO' SELECT @FechaConclusion  = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = 80030 SELECT @Ok = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spGenerarCFD.StoredProcedure.sql",
+
+"case":["CASE WHEN VersionFecha < @Fecha OR VersionFecha IS NULL THEN Version ELSE VersionAnterior END","CASE WHEN versionFecha<@Fecha OR versionFecha IS NULL THEN version ELSE versionAnterior END","CASE WHEN dbo.fnEsNumerico(@OrdenCompra) = 1 THEN @OrdenCompra ELSE NULL END","CASE @MovTipo WHEN  'VTAS.F' THEN 1 ELSE NULL END","CASE WHEN NULLIF(LTRIM(@Recibo),'') IS NOT NULL THEN 0 ELSE 1 END","CASE WHEN NULLIF(LTRIM(@Recibo),'') IS NOT NULL THEN 0 ELSE 1 END","CASE WHEN NULLIF(LTRIM(@Recibo),'') IS NOT NULL THEN 0 ELSE 1 END","CASE WHEN NULLIF(LTRIM(@Recibo),'') IS NOT NULL THEN 0 ELSE 1 END","CASE WHEN NULLIF(LTRIM(@Recibo),'') IS NOT NULL THEN 0 ELSE 1 END","CASE WHEN NULLIF(LTRIM(@Recibo),'') IS NOT NULL THEN 0 ELSE 1 END","CASE WHEN NULLIF(RTRIM(dbo.fnEDI(@EmpresaGLN)),'') IS NULL THEN '' ELSE '::9' END","CASE WHEN NULLIF(RTRIM(dbo.fnEDI(@SucursalGLN)),'') IS NULL THEN '' ELSE '::9' END","CASE WHEN @Sucursal = 0 THEN NULL ELSE @SucursalDireccion END","CASE WHEN @Sucursal = 0 THEN NULL ELSE @SucursalDireccionNumero END","CASE WHEN @Sucursal = 0 THEN NULL ELSE ISNULL(NULLIF(RTRIM(@SucursalDireccionNumeroInt), ''), 'S/N') END","CASE WHEN @Sucursal = 0 THEN NULL ELSE @SucursalColonia END","CASE WHEN @Sucursal = 0 THEN NULL ELSE @SucursalPoblacion END","CASE WHEN @Sucursal = 0 THEN NULL ELSE @SucursalObservaciones END","CASE WHEN @Sucursal = 0 THEN NULL ELSE @SucursalDelegacion END","CASE WHEN @Sucursal = 0 THEN NULL ELSE @SucursalEstado END","CASE WHEN @Sucursal = 0 THEN NULL ELSE @SucursalPais END","CASE WHEN @Sucursal = 0 THEN NULL ELSE @SucursalCodigoPostal END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spGenerarCFDCoppel.StoredProcedure.sql",
+
+"case":["CASE WHEN VersionFecha < @Fecha OR VersionFecha IS NULL THEN Version ELSE VersionAnterior END","CASE WHEN versionFecha<@Fecha OR versionFecha IS NULL THEN version ELSE versionAnterior END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spGenerarCFDSAT22.StoredProcedure.sql",
+
+"case":["CASE WHEN versionFecha<@Fecha OR versionFecha IS NULL THEN version ELSE versionAnterior END","CASE WHEN VersionFecha < @Fecha OR VersionFecha IS NULL THEN Version ELSE VersionAnterior END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spGenerarCFDSAT32.StoredProcedure.sql",
+
+"case":["CASE WHEN versionFecha<@Fecha OR versionFecha IS NULL THEN version ELSE versionAnterior END","CASE WHEN VersionFecha < @Fecha OR VersionFecha IS NULL THEN Version ELSE VersionAnterior END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spGenerarEstadoCuenta.StoredProcedure.sql",
+
+"case":["CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @Cuenta IS NULL THEN Proveedor ELSE @Cuenta END","CASE WHEN @Cuenta IS NULL THEN ca.Proveedor ELSE @Cuenta END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @Cuenta = '0' SELECT @Cuenta = NULL","IF @Sucursal = -1 SELECT @Sucursal = NULL","IF @EstatusEspecifico = '0' SELECT @EstatusEspecifico = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spGenerarVentaLote.StoredProcedure.sql",
+
+"case":["CASE @CteCat WHEN NULL THEN ISNULL(cea.Categoria,'') ELSE ISNULL(v.Categoria,'') END","CASE @CteFam WHEN NULL THEN ISNULL(cea.Familia,'') ELSE ISNULL(v.Familia,'') END","CASE @CteGpo WHEN NULL THEN ISNULL(cea.Grupo,'') ELSE ISNULL(v.Grupo,'') END","CASE @CteCat WHEN NULL THEN ISNULL(cea.Categoria, '') ELSE @CteCat END","CASE @CteGpo WHEN NULL THEN ISNULL(cea.Grupo, '') ELSE @CteGpo END","CASE @CteFam WHEN NULL THEN ISNULL(cea.Familia, '') ELSE @CteFam END","CASE @CteCat WHEN NULL THEN ISNULL(cea.Categoria,'') ELSE ISNULL(vl.Categoria,'') END","CASE @CteFam WHEN NULL THEN ISNULL(cea.Familia,'') ELSE ISNULL(vl.Familia,'') END","CASE @CteGpo WHEN NULL THEN ISNULL(cea.Grupo,'') ELSE ISNULL(vl.Grupo,'') END","CASE @CteCat WHEN NULL THEN ISNULL(cea.Categoria, '') ELSE @CteCat END","CASE @CteGpo WHEN NULL THEN ISNULL(cea.Grupo, '') ELSE @CteGpo END","CASE @CteFam WHEN NULL THEN ISNULL(cea.Familia, '') ELSE @CteFam END","CASE @CteCat WHEN NULL THEN ISNULL(cea.Categoria,'') ELSE ISNULL(v.Categoria,'') END","CASE @CteFam WHEN NULL THEN ISNULL(cea.Familia,'') ELSE ISNULL(v.Familia,'') END","CASE @CteGpo WHEN NULL THEN ISNULL(cea.Grupo,'') ELSE ISNULL(v.Grupo,'') END","CASE @CteCat WHEN NULL THEN ISNULL(cea.Categoria, '') ELSE @CteCat END","CASE @CteGpo WHEN NULL THEN ISNULL(cea.Grupo, '') ELSE @CteGpo END","CASE @CteFam WHEN NULL THEN ISNULL(cea.Familia, '') ELSE @CteFam END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF RTRIM(@CteCat) IN ('', '(TODOS)', 'NULL', 'TODOS') SELECT @CteCat = NULL","IF RTRIM(@CteFam) IN ('', '(TODOS)', 'NULL', 'TODOS') SELECT @CteFam = NULL","IF RTRIM(@CteGpo) IN ('', '(TODOS)', 'NULL', 'TODOS') SELECT @CteGpo = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spHistSugerirEstructura.StoredProcedure.sql",
+
+"case":["CASE WHEN @Nulos = 1 THEN 'NULL' ELSE 'NOT NULL' END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spInformeGenerarEstadoCuenta.StoredProcedure.sql",
+
+"case":["CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @Cuenta IS NULL THEN ca.Proveedor ELSE @Cuenta END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @Cuenta IS NULL THEN ca.Proveedor ELSE @Cuenta END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @Cuenta = '0' SELECT @Cuenta = NULL","IF @Sucursal = -1 SELECT @Sucursal = NULL","IF @EstatusEspecifico = '0' SELECT @EstatusEspecifico = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spInformeGenerarEstadoCuentaSimple.StoredProcedure.sql",
+
+"case":["CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END","CASE WHEN @EstatusEspecifico IS NULL THEN ca.Estatus ELSE @EstatusEspecifico END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @Cuenta = '0' SELECT @Cuenta = NULL","IF @Cuenta = '' SELECT @Cuenta = NULL","IF @Cuenta IN ('', '(Todos)') SELECT @Cuenta = NULL","IF @Sucursal = -1 SELECT @Sucursal = NULL","IF @EstatusEspecifico = '0' SELECT @EstatusEspecifico = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spInsertarJuegoOmision.StoredProcedure.sql",
+
+"case":["CASE WHEN NULLIF(@SubCuenta,'') IS NOT NULL THEN @Opcion+' ('+@SubCuenta+')' ELSE @Opcion END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @CfgInvRegistrarPrecios = 0 SELECT @Precio = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spInvAfectar.StoredProcedure.sql",
+
+"case":["CASE WHEN @CfgVentaArtEstatus = 1 THEN @ArtEstatus ELSE NULL END","CASE WHEN @CfgVentaArtSituacion = 1 THEN @ArtSituacion ELSE NULL END","CASE WHEN @EstatusNuevo IN ('PENDIENTE', 'PROCESAR') THEN @ImporteTotal /*@ImporteCx*/ ELSE NULL END","CASE WHEN @EstatusNuevo IN ('PENDIENTE', 'PROCESAR') THEN @ImporteTotal /*@SumaImporteNeto*/ ELSE NULL END","CASE WHEN UltimoCambio IS NULL THEN */@FechaRegistro /*ELSE UltimoCambio END*/, Estatus = @EstatusNuevo, Saldo = CASE WHEN @EstatusNuevo IN ('CONCLUIDO', 'CANCELADO') THEN NULL ELSE Saldo END, Situacion = CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END","CASE WHEN UltimoCambio IS NULL THEN */@FechaRegistro /*ELSE UltimoCambio END*/, Estatus = @EstatusNuevo, Saldo = CASE WHEN @EstatusNuevo IN ('CONCLUIDO', 'CANCELADO') THEN NULL ELSE Saldo END, Situacion = CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END","CASE WHEN UltimoCambio IS NULL THEN */@FechaRegistro /*ELSE UltimoCambio END","CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END","CASE WHEN UltimoCambio IS NULL THEN */@FechaRegistro /*ELSE UltimoCambio END","CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END"],
+
+"compare":{"where":null,"and":["AND @MovTipo NOT IN ('INV.SI', 'INV.DTI') */SELECT @AlmacenDestino = NULL","AND @Base <> 'TODO' THEN ISNULL(CantidadCancelada, 0.0) + @Cantidad ELSE CantidadCancelada END, CantidadA = NULL","AND @Base <> 'TODO' THEN ISNULL(CantidadCancelada, 0.0) + @Cantidad ELSE CantidadCancelada END, CantidadA = NULL","AND @Base <> 'TODO' THEN ISNULL(CantidadCancelada, 0.0) + @Cantidad ELSE CantidadCancelada END, CantidadA = NULL","AND @Base <> 'TODO' THEN ISNULL(CantidadCancelada, 0.0) + @Cantidad ELSE CantidadCancelada END, CantidadA = NULL","AND @Accion = 'AFECTAR' UPDATE Compra SET Proveedor = NULL"],"or":null,"if":["IF @MovTipo = 'INV.EI' UPDATE InvD SET Tarima = NULL","IF @EsTransferencia = 0 /*AND @MovTipo NOT IN ('INV.SI', 'INV.DTI') */SELECT @AlmacenDestino = NULL","IF @AplicaMov <> NULL","IF @MovTipo = 'VTAS.B' SELECT @AcumCantidad = NULL","IF @MovTipo IN ('COMS.B', 'COMS.CA', 'COMS.GX') SELECT @AcumCantidad = NULL","IF @CantidadPendiente = 0.0 SELECT @CantidadPendiente = NULL","IF @CantidadReservada = 0.0 SELECT @CantidadReservada = NULL","IF @CantidadOrdenada  = 0.0 SELECT @CantidadOrdenada  = NULL","IF @Modulo = 'VTAS' UPDATE VentaD  SET CantidadCancelada = CASE WHEN @Accion = 'CANCELAR' AND @Base <> 'TODO' THEN ISNULL(CantidadCancelada, 0.0) + @Cantidad ELSE CantidadCancelada END, CantidadA = NULL","IF @Modulo = 'INV'  UPDATE InvD    SET CantidadCancelada = CASE WHEN @Accion = 'CANCELAR' AND @Base <> 'TODO' THEN ISNULL(CantidadCancelada, 0.0) + @Cantidad ELSE CantidadCancelada END, CantidadA = NULL","IF @Modulo = 'PROD' UPDATE ProdD   SET CantidadCancelada = CASE WHEN @Accion = 'CANCELAR' AND @Base <> 'TODO' THEN ISNULL(CantidadCancelada, 0.0) + @Cantidad ELSE CantidadCancelada END, CantidadA = NULL","IF @Modulo = 'COMS' UPDATE CompraD SET CantidadCancelada = CASE WHEN @Accion = 'CANCELAR' AND @Base <> 'TODO' THEN ISNULL(CantidadCancelada, 0.0) + @Cantidad ELSE CantidadCancelada END, CantidadA = NULL","IF @Modulo = 'VTAS' UPDATE VentaD  SET CantidadA = NULL","IF @Modulo = 'COMS' UPDATE CompraD SET CantidadA = NULL","IF @Modulo = 'INV'  UPDATE InvD    SET CantidadA = NULL","IF @Modulo = 'PROD' UPDATE ProdD   SET CantidadA = NULL","IF @MovTipo = 'COMS.R' AND @Accion = 'AFECTAR' UPDATE Compra SET Proveedor = NULL","IF @EstatusNuevo <> 'CANCELADO' SELECT @FechaConclusion = NULL","IF @EstatusNuevo = 'CANCELADO' SELECT @FechaCancelacion = @FechaRegistro ELSE SELECT @FechaCancelacion = NULL","IF @Modulo = 'VTAS' UPDATE Venta  SET Vencimiento = @Vencimiento,  Concepto = @Concepto, FechaConclusion = @FechaConclusion, FechaCancelacion = @FechaCancelacion, UltimoCambio = /*CASE WHEN UltimoCambio IS NULL THEN */@FechaRegistro /*ELSE UltimoCambio END*/, Estatus = @EstatusNuevo, Saldo = CASE WHEN @EstatusNuevo IN ('CONCLUIDO', 'CANCELADO') THEN NULL ELSE Saldo END, Situacion = CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END, GenerarPoliza = @GenerarPoliza, Autorizacion = @Autorizacion, Mensaje = NULL","IF @Modulo = 'COMS' UPDATE Compra SET Vencimiento = @Vencimiento,  Concepto = @Concepto, FechaConclusion = @FechaConclusion, FechaCancelacion = @FechaCancelacion, UltimoCambio = /*CASE WHEN UltimoCambio IS NULL THEN */@FechaRegistro /*ELSE UltimoCambio END*/, Estatus = @EstatusNuevo, Saldo = CASE WHEN @EstatusNuevo IN ('CONCLUIDO', 'CANCELADO') THEN NULL ELSE Saldo END, Situacion = CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END, GenerarPoliza = @GenerarPoliza, Autorizacion = @Autorizacion, Mensaje = NULL","IF @Modulo = 'VTAS' UPDATE Venta  SET Saldo = NULL","IF @Modulo = 'COMS' UPDATE Compra SET Saldo = NULL","IF @GenerarEstatus <> 'CANCELADO' SELECT @FechaConclusion = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = 80030 SELECT @Ok = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spInvUtilizarTodoDetalle.StoredProcedure.sql",
+
+"case":["CASE WHEN @MovTipo IN ('COMS.CP', 'COMS.O', 'COMS.EI') THEN DestinoTipo ELSE NULL END, Destino = CASE WHEN @MovTipo IN ('COMS.CP', 'COMS.O', 'COMS.EI') THEN Destino ELSE NULL END, DestinoID = CASE WHEN @MovTipo IN ('COMS.CP', 'COMS.O', 'COMS.EI') THEN DestinoID ELSE NULL END","CASE WHEN @MovTipo IN ('COMS.CP', 'COMS.O', 'COMS.EI') THEN DestinoTipo ELSE NULL END, Destino = CASE WHEN @MovTipo IN ('COMS.CP', 'COMS.O', 'COMS.EI') THEN Destino ELSE NULL END, DestinoID = CASE WHEN @MovTipo IN ('COMS.CP', 'COMS.O', 'COMS.EI') THEN DestinoID ELSE NULL END","CASE WHEN @MovTipo IN ('COMS.CP', 'COMS.O', 'COMS.EI') THEN DestinoTipo ELSE NULL END","CASE WHEN @MovTipo IN ('COMS.CP', 'COMS.O', 'COMS.EI') THEN Destino     ELSE NULL END","CASE WHEN @MovTipo IN ('COMS.CP', 'COMS.O', 'COMS.EI') THEN DestinoID   ELSE NULL END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @GenerarDirecto = 1 SELECT @OrigenMov = NULL","IF @Base IN ('TODO', 'IDENTICO') UPDATE #VentaDetalle SET ID = @DID, CantidadPendiente = NULL","IF @Base = 'SELECCION' UPDATE #VentaDetalle SET ID = @DID, Cantidad = CantidadA, CantidadInventario = CantidadA * CantidadInventario / Cantidad, CantidadPendiente = NULL","IF @Base = 'PENDIENTE' UPDATE #VentaDetalle SET ID = @DID, Cantidad = NULLIF(ISNULL(CantidadPendiente,0.0)/* + ISNULL(CantidadReservada, 0.0)*/, 0.0), CantidadInventario = (NULLIF(ISNULL(CantidadPendiente,0.0) + ISNULL(CantidadReservada, 0.0), 0.0)) * CantidadInventario / Cantidad, CantidadPendiente = NULL","IF @Base = 'RESERVADO' UPDATE #VentaDetalle SET ID = @DID, Cantidad = CantidadReservada, CantidadInventario = CantidadReservada * CantidadInventario / Cantidad, CantidadPendiente = NULL","IF @GenerarDirecto = 1 SELECT @OrigenMov = NULL","IF @Base = 'TODO'      UPDATE #ProdDetalle SET ID = @DID, AutoGenerado = 0, ProdSerieLote = NULL","IF @Base = 'SELECCION' UPDATE #ProdDetalle SET ID = @DID, AutoGenerado = 0, Cantidad = CantidadA, CantidadInventario = CantidadA * CantidadInventario / Cantidad, CantidadPendiente = NULL","IF @Base = 'PENDIENTE' UPDATE #ProdDetalle SET ID = @DID, AutoGenerado = 0, Cantidad = NULLIF(ISNULL(CantidadPendiente,0.0) + ISNULL(CantidadReservada, 0.0), 0.0), CantidadInventario = (NULLIF(ISNULL(CantidadPendiente,0.0) + ISNULL(CantidadReservada, 0.0), 0.0)) * CantidadInventario / Cantidad, CantidadPendiente = NULL","IF @Base = 'RESERVADO' UPDATE #ProdDetalle SET ID = @DID, AutoGenerado = 0, Cantidad = CantidadReservada, CantidadInventario = CantidadReservada * CantidadInventario / Cantidad, CantidadPendiente = NULL","IF @Base IN ('TODO', 'IDENTICO') UPDATE #CompraDetalle SET ID = @DID, CantidadCancelada = NULL","IF @Base = 'SELECCION' UPDATE #CompraDetalle SET ID = @DID, DestinoTipo = CASE WHEN @MovTipo IN ('COMS.CP', 'COMS.O', 'COMS.EI') THEN DestinoTipo ELSE NULL END, Destino = CASE WHEN @MovTipo IN ('COMS.CP', 'COMS.O', 'COMS.EI') THEN Destino ELSE NULL END, DestinoID = CASE WHEN @MovTipo IN ('COMS.CP', 'COMS.O', 'COMS.EI') THEN DestinoID ELSE NULL END, Cantidad = CantidadA, CantidadInventario = CantidadA * CantidadInventario / Cantidad, CantidadCancelada = NULL","IF @Base = 'PENDIENTE' UPDATE #CompraDetalle SET ID = @DID, DestinoTipo = CASE WHEN @MovTipo IN ('COMS.CP', 'COMS.O', 'COMS.EI') THEN DestinoTipo ELSE NULL END, Destino = CASE WHEN @MovTipo IN ('COMS.CP', 'COMS.O', 'COMS.EI') THEN Destino ELSE NULL END, DestinoID = CASE WHEN @MovTipo IN ('COMS.CP', 'COMS.O', 'COMS.EI') THEN DestinoID ELSE NULL END, Cantidad = CantidadPendiente, CantidadInventario = CantidadPendiente * CantidadInventario / Cantidad, CantidadCancelada = NULL","IF @GenerarDirecto = 1 SELECT @OrigenMov = NULL","IF @Base IN ('TODO', 'IDENTICO') UPDATE #InvDetalle SET ID = @DID, CantidadPendiente = NULL","IF @Base = 'SELECCION' UPDATE #InvDetalle SET ID = @DID, Cantidad = CantidadA, CantidadInventario = CantidadA * CantidadInventario / Cantidad, CantidadPendiente = NULL","IF @Base = 'PENDIENTE' UPDATE #InvDetalle SET ID = @DID, Cantidad = NULLIF(ISNULL(CantidadPendiente,0.0) + ISNULL(CantidadReservada, 0.0), 0.0), CantidadInventario = (NULLIF(ISNULL(CantidadPendiente,0.0) + ISNULL(CantidadReservada, 0.0), 0.0)) * CantidadInventario / Cantidad, CantidadPendiente = NULL","IF @Base = 'RESERVADO' UPDATE #InvDetalle SET ID = @DID, Cantidad = CantidadReservada, CantidadInventario = CantidadReservada * CantidadInventario / Cantidad, CantidadPendiente = NULL","IF @GenerarDirecto = 1 SELECT @OrigenMov = NULL","IF @Base = 'TODO'      UPDATE #InvDetalle SET ID = @DID, CantidadPendiente = NULL","IF @Base = 'SELECCION' UPDATE #InvDetalle SET ID = @DID, Cantidad = CantidadA, CantidadPendiente = NULL","IF @Base = 'PENDIENTE' UPDATE #InvDetalle SET ID = @DID, Cantidad = CantidadPendiente, CantidadPendiente = NULL","IF @GenerarDirecto = 1 SELECT @OrigenMov = NULL","IF @Base = 'TODO'      UPDATE #SAUXDetalle SET ID = @DID, CantidadPendeiente = NULL","IF @Base = 'SELECCION' UPDATE #SAUXDetalle SET ID = @DID, Cantidad = CantidadA, CantidadPendeiente = NULL","IF @Base = 'PENDIENTE' UPDATE #SAUXDetalle SET ID = @DID, Cantidad = CantidadPendeiente, CantidadPendeiente = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spInvVerificar.StoredProcedure.sql",
+
+"case":["CASE WHEN @POS = 1 THEN NULLIF(CxcArticuloTarjetasDef,'') ELSE NULL END","CASE WHEN a.TieneCaducidad=1 THEN NULLIF(a.CaducidadMinima, 0) ELSE CONVERT(int, NULL) END","CASE WHEN NULLIF(@SubCuenta,'') IS NULL THEN '' ELSE '(' + @SubCuenta + ')' END"],
+
+"compare":{"where":null,"and":["AND @MovTipo NOT IN ('INV.OT', 'INV.TI') SELECT @AlmacenDestino = NULL","AND UPPER(@DetalleTipo) = 'EXCEDENTE' SELECT @Ok = NULL","AND @OrigenTipo = 'VMOS' SELECT @Ok = NULL","AND  @CfgVentaRefSerieLotePedidos = 0 SELECT @Ok = NULL","AND @AplicaMovTipo = 'VTAS.R' SELECT @Ok = NULL","AND @Cantidad > 0.0 SELECT @Ok = NULL","AND (@OrigenTipo = 'VMOS' OR @MovTipo = 'VTAS.FM') SELECT @Ok = NULL","AND @CfgNotasBorrador = 1 SELECT @Ok = NULL","AND @Accion = 'CANCELAR' SELECT @Ok = NULL","AND @Accion = 'AFECTAR' SELECT @Ok = NULL","AND @CantidadOriginal < 0 SELECT @Ok = NULL","AND @OrigenTipo = 'VMOS' SELECT @Ok = NULL","AND  @CfgVentaRefSerieLotePedidos = 0 SELECT @Ok = NULL","AND @AplicaMovTipo = 'VTAS.R' SELECT @Ok = NULL"],"or":["OR @AlmacenVtasConsignacion = NULL","OR @MovTipo = 'VTAS.FM') SELECT @Ok = NULL"],"if":["IF @VtasConsignacion = 0 OR @AlmacenVtasConsignacion = NULL","IF @AplicaMov <> NULL","IF @EsTransferencia = 0 AND @MovTipo NOT IN ('INV.OT', 'INV.TI') SELECT @AlmacenDestino = NULL","IF @MovTipo = 'PROD.E' AND UPPER(@DetalleTipo) = 'EXCEDENTE' SELECT @Ok = NULL","IF @Modulo = 'VTAS' AND @OrigenTipo = 'VMOS' SELECT @Ok = NULL","IF @MovTipo IN ('VTAS.C', 'VTAS.P') AND  @CfgVentaRefSerieLotePedidos = 0 SELECT @Ok = NULL","IF @OK = 20320 AND @MovTipo = 'VTAS.F' AND @AplicaMovTipo = 'VTAS.R' SELECT @Ok = NULL","IF @Ok = 20080 AND @Accion = 'CANCELAR' AND @MovTipo = 'INV.CP' AND @Cantidad > 0.0 SELECT @Ok = NULL","IF @Ok IS NOT NULL AND @Modulo = 'VTAS' AND (@OrigenTipo = 'VMOS' OR @MovTipo = 'VTAS.FM') SELECT @Ok = NULL","IF @MovTipo IN ('VTAS.N', 'VTAS.NR', 'VTAS.NO', 'VTAS.FM') AND @CfgNotasBorrador = 1 SELECT @Ok = NULL","IF @MovTipo IN ('VTAS.N', 'VTAS.NR', 'VTAS.NO', 'VTAS.FM') AND @Accion = 'CANCELAR' SELECT @Ok = NULL","IF @MovTipo IN ('VTAS.N') AND @Accion = 'AFECTAR' SELECT @Ok = NULL","IF @Ok = 20090 AND @MovTipo IN ('VTAS.N', 'VTAS.NR', 'VTAS.NO', 'VTAS.FM') AND @CantidadOriginal < 0 SELECT @Ok = NULL","IF @Modulo = 'VTAS' AND @OrigenTipo = 'VMOS' SELECT @Ok = NULL","IF @MovTipo IN ('VTAS.C', 'VTAS.P') AND  @CfgVentaRefSerieLotePedidos = 0 SELECT @Ok = NULL","IF @OK = 20320 AND @MovTipo = 'VTAS.F' AND @AplicaMovTipo = 'VTAS.R' SELECT @Ok = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spLDIGeneraCadena.StoredProcedure.sql",
+
+"case":["CASE WHEN @EmpresaLDI IS NOT NULL THEN ISNULL(@EmpresaLDI, '') ELSE '' END","CASE WHEN @TrxSubType IS NOT NULL THEN ISNULL(@Separador + @TrxSubTypeLDI, '') ELSE '' END","CASE WHEN @NoTarjeta IS NOT NULL THEN ISNULL(@Separador + @NoTarjetaLDI, '') ELSE '' END","CASE WHEN @NoTarjetaReemplazo IS NOT NULL THEN ISNULL(@Separador + @NoTarjetaReemplazoLDI, '') ELSE '' END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spMovInfo.StoredProcedure.sql",
+
+"case":["CASE ContactoTipo WHEN 'Cliente' THEN Cliente WHEN 'Prospecto' THEN Prospecto WHEN 'Proveedor' THEN Proveedor WHEN 'Personal' THEN Personal WHEN 'Agente' THEN Agente ELSE NULL END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @Modulo = 'GAS'   SELECT @ID = ID, @OrigenTipo = OrigenTipo, @Origen = Origen, @OrigenID = OrigenID, @FechaEmision = FechaEmision, @FechaCancelacion = FechaCancelacion, @Ejercicio = Ejercicio, @Periodo = Periodo, @Empresa = Empresa, @Usuario = Usuario, @Proyecto = Proyecto, @Concepto = NULL","IF @Modulo = 'CORTE' SELECT @ID = ID, @OrigenTipo = OrigenTipo, @Origen = Origen, @OrigenID = OrigenID, @FechaEmision = FechaEmision, @FechaCancelacion = FechaCancelacion, @Ejercicio = Ejercicio, @Periodo = Periodo, @Empresa = Empresa, @Usuario = Usuario, @Proyecto = Proyecto, @Concepto = Concepto, @Referencia = Referencia, @Sucursal = Sucursal, @Mov = Mov, @MovID = MovID, @Estatus = Estatus, @Situacion = Situacion, @SituacionFecha = SituacionFecha, @SituacionUsuario = SituacionUsuario, @SituacionNota = SituacionNota, @UEN = UEN, @Observaciones = Observaciones, @UltimoCambio = UltimoCambio, @Moneda = Moneda, @TipoCambio = TipoCambio, @Vencimiento = NULL","IF @Modulo = 'NOM'   SELECT @ID = ID, @OrigenTipo = OrigenTipo, @Origen = Origen, @OrigenID = OrigenID, @FechaEmision = FechaEmision, @FechaCancelacion = FechaCancelacion, @Ejercicio = Ejercicio, @Periodo = Periodo, @Empresa = Empresa, @Usuario = Usuario, @Proyecto = Proyecto, @Concepto = Concepto, @Referencia = NULL","IF @Modulo = 'ASIS'  SELECT @ID = ID, @OrigenTipo = OrigenTipo, @Origen = Origen, @OrigenID = OrigenID, @FechaEmision = FechaEmision, @FechaCancelacion = FechaCancelacion, @Ejercicio = Ejercicio, @Periodo = Periodo, @Empresa = Empresa, @Usuario = Usuario, @Proyecto = Proyecto, @Concepto = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spNominaAfectar.StoredProcedure.sql",
+
+"case":["CASE @Accion WHEN 'CANCELAR' THEN NULL ELSE @Cantidad END","CASE WHEN @UsaCantidad = 0 THEN NULL WHEN @Accion = 'CANCELAR' THEN NULL ELSE @Cantidad END","CASE WHEN UltimoCambio IS NULL THEN */@FechaRegistro /*ELSE UltimoCambio END","CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @FechaA IS NOT NULL SELECT @CxCondicion = '(Fecha)' ELSE SELECT @CxCondicion = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @EstatusNuevo = 'CANCELADO' SELECT @FechaCancelacion = @FechaRegistro ELSE SELECT @FechaCancelacion = NULL","IF @EstatusNuevo <> 'CANCELADO' SELECT @FechaConclusion  = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spNotaCreditoMayoreoMavi.StoredProcedure.sql",
+
+"case":["Case When vd.Impuesto1 = 15 Then 5 Else 7 END) as 'EsQuince',(Case When c.Retencion <> 0 AND c.Retencion is Not null Then 2 Else 3 END) as 'HayRetencion',(Case When c.FacDesgloseIVA = 1 AND c.FacDesgloseIVA IS NOT NULL Then 13 Else 11 END","Case When c.Retencion <> 0 AND c.Retencion is Not null Then 2 Else 3 END","Case When C.FacDesgloseIVA = 1 AND C.FacDesgloseIVA IS NOT NULL Then 13 Else 11 END","Case When c.Retencion <> 0 AND c.Retencion is Not null Then 2 Else 3 END","Case When C.FacDesgloseIVA = 1 AND C.FacDesgloseIVA IS NOT NULL Then 13 Else 11 END","Case When c.Retencion <> 0 AND c.Retencion is Not null Then 2 Else 3 END","Case When C.FacDesgloseIVA = 1 AND C.FacDesgloseIVA IS NOT NULL Then 13 Else 11 END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spOfertaAplicar.StoredProcedure.sql",
+
+"case":["CASE WHEN OfertaID IS NOT NULL THEN NULL ELSE DescuentoLinea END","CASE WHEN @Monedero IS NOT NULL THEN  t.Puntos ELSE NULL END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spOfertaProcesar.StoredProcedure.sql",
+
+"case":["CASE WHEN PrecioSugerido > 0 THEN @ArtDescuento ELSE NULL END","CASE WHEN PrecioSugerido > 0 THEN @ArtComision ELSE NULL END","CASE WHEN PrecioSugerido > 0 THEN @ArtComisionPorcentaje ELSE NULL END","CASE WHEN PrecioSugerido > 0 THEN @ArtOfertaID ELSE NULL END","CASE WHEN PrecioSugerido > 0 THEN ISNULL(@ArtOfertaID,OfertaID) ELSE NULL END","CASE WHEN PrecioSugerido > 0 THEN @ArtDescuento ELSE NULL END","CASE WHEN PrecioSugerido > 0 THEN @ArtComision ELSE NULL END","CASE WHEN PrecioSugerido > 0 THEN @ArtComisionPorcentaje ELSE NULL END","CASE WHEN PrecioSugerido > 0 THEN @ArtOfertaID ELSE NULL END","CASE WHEN PrecioSugerido > 0 THEN ISNULL(@ArtOfertaID,OfertaID) ELSE NULL END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spPCAfectar.StoredProcedure.sql",
+
+"case":["CASE WHEN UltimoCambio IS NULL THEN */@FechaRegistro /*ELSE UltimoCambio END","CASE WHEN @Estatus <> @EstatusNuevo THEN NULL ELSE Situacion END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @EstatusNuevo = 'CANCELADO' SELECT @FechaCancelacion = @FechaRegistro ELSE SELECT @FechaCancelacion = NULL","IF @EstatusNuevo <> 'CANCELADO' SELECT @FechaConclusion  = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spPCSet.StoredProcedure.sql",
+
+"case":["CASE WHEN @EstatusNuevo IS NULL THEN EstatusPrecio ELSE @EstatusNuevo END","CASE WHEN @EstatusNuevo IS NULL THEN EstatusCosto ELSE @EstatusNuevo END","CASE WHEN @EstatusNuevo IS NULL THEN EstatusCosto ELSE @EstatusNuevo END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spPlanCentroDay.StoredProcedure.sql",
+
+"case":["CASE @Centro WHEN NULL THEN p.Centro ELSE @Centro END","CASE @Centro WHEN NULL THEN p.Centro ELSE @Centro END","CASE @Centro WHEN NULL THEN p.Centro ELSE @Centro END","CASE @Centro WHEN NULL THEN p.Centro ELSE @Centro END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spPlanCentroMonth.StoredProcedure.sql",
+
+"case":["CASE @Centro WHEN NULL THEN p.Centro ELSE @Centro END","CASE @Centro WHEN NULL THEN p.Centro ELSE @Centro END","CASE @Centro WHEN NULL THEN p.Centro ELSE @Centro END","CASE @Centro WHEN NULL THEN p.Centro ELSE @Centro END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spPlanCentroWeek.StoredProcedure.sql",
+
+"case":["CASE @Centro WHEN NULL THEN p.Centro ELSE @Centro END","CASE @Centro WHEN NULL THEN p.Centro ELSE @Centro END","CASE @Centro WHEN NULL THEN p.Centro ELSE @Centro END","CASE @Centro WHEN NULL THEN p.Centro ELSE @Centro END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spPOSAfectar.StoredProcedure.sql",
+
+"case":["CASE WHEN @MovClave IN('POS.P') THEN pmv.Cantidad ELSE NULL END","CASE WHEN @MultiUnidades = 1 THEN pmv.CantidadInventario ELSE NULL END","CASE WHEN @CfgVentaPrecioMoneda = 1 THEN @Moneda ELSE NULL END","CASE WHEN @CfgVentaPrecioMoneda = 1 THEN @TipoCambio ELSE NULL END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spPOSISAfectarVenta.StoredProcedure.sql",
+
+"case":["CASE WHEN (NULLIF(Origen,'') IS NOT NULL AND NULLIF(OrigenID,'') IS NOT NULL)  THEN 0 ELSE 1 END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spPOSLDIGeneraCadena.StoredProcedure.sql",
+
+"case":["CASE WHEN @EmpresaLDI IS NOT NULL THEN ISNULL(@EmpresaLDI, '') ELSE '' END","CASE WHEN @TrxSubType IS NOT NULL THEN ISNULL(@Separador + @TrxSubTypeLDI, '') ELSE '' END","CASE WHEN @NoTarjeta IS NOT NULL THEN ISNULL(@Separador + @NoTarjetaLDI, '') ELSE '' END","CASE WHEN @NoTarjetaReemplazo IS NOT NULL THEN ISNULL(@Separador + @NoTarjetaReemplazoLDI, '') ELSE '' END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spPOSVentaInsertaArticulo.StoredProcedure.sql",
+
+"case":["CASE WHEN @POSAgenteDetalle = 1 THEN @POSAgenteDetMaestro ELSE NULL END","CASE WHEN @POSAgenteDetalle = 1 THEN @POSAgenteDetMaestro ELSE NULL END"],
+
+"compare":{"where":null,"and":["AND @CodigoAccion = NULL"],"or":null,"if":["IF @POSAgenteDetalle = 1 AND @CodigoAccion = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spReporteKardex.StoredProcedure.sql",
+
+"case":["CASE WHEN @CosteoOpcion = 1 THEN u.Subcuenta ELSE NULL END","CASE WHEN @CosteoOpcion = 1 THEN u.Subcuenta ELSE NULL END","CASE WHEN @CosteoOpcion = 1 THEN u.Subcuenta ELSE NULL END","CASE WHEN @CosteoOpcion = 1 THEN u.Subcuenta ELSE NULL END","CASE WHEN @CosteoOpcion = 1 THEN r.Subcuenta ELSE NULL END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @ArtOpcion = '(TODAS)' SELECT @ArtOpcion  = NULL","IF @ArtCategoria = '(Todos)' SELECT @ArtCategoria = NULL","IF @ArtGrupo = '(Todos)' SELECT @ArtGrupo = NULL","IF @ArtFamilia = '(Todos)' SELECT @ArtFamilia = NULL","IF @ArtFabricante = '(Todos)' SELECT @ArtFabricante = NULL","IF @ArtLinea = '(Todos)' SELECT @ArtLinea = NULL","IF @Almacen = '(TODOS)' SELECT @Almacen = NULL","IF @ArtSerieLote = '(TODOS)' SELECT @ArtSerieLote  = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spRHAfectar.StoredProcedure.sql",
+
+"case":["CASE WHEN @Accion <> 'CANCELAR' THEN @Incremento ELSE NULL END","CASE WHEN UltimoCambio IS NULL THEN */@FechaRegistro /*ELSE UltimoCambio END","CASE WHEN @Estatus <> @EstatusNuevo THEN NULL ELSE Situacion END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @EstatusNuevo = 'CANCELADO' SELECT @FechaCancelacion = @FechaRegistro ELSE SELECT @FechaCancelacion = NULL","IF @EstatusNuevo <> 'CANCELADO' SELECT @FechaConclusion  = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spRSFlujoEfectivo.StoredProcedure.sql",
+
+"case":["CASE WHEN @InfoUso IN( '(Todos)', '') THEN NULL ELSE @InfoUso END","CASE WHEN @InfoMov IN( '(Todos)', '') THEN NULL ELSE @InfoMov END","CASE WHEN @Moneda IN( '(Todas)', '') THEN NULL ELSE @Moneda END","CASE WHEN @Empresa IN( '(Todas)', '') THEN NULL ELSE @Empresa END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spSincroFinal.StoredProcedure.sql",
+
+"case":["CASE WHEN @Modulo IS NULL THEN Modulo ELSE @Modulo END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spSincroFinalModulo.StoredProcedure.sql",
+
+"case":["CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END","CASE WHEN @ID IS NULL THEN ID ELSE @ID END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spSWCte_AltaAtenRep.StoredProcedure.sql",
+
+"case":["CASE WHEN @Usuario IS NULL THEN ' - SIN USUARIO, Cliente: ' + @Cliente ELSE '' END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spTablaAmortizacionGenerar.StoredProcedure.sql",
+
+"case":["CASE WHEN @Modulo = 'CXC' THEN ACDisposicionCxp ELSE NULL            END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @Ok = 80030 SELECT @Ok = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spTMAAfectar.StoredProcedure.sql",
+
+"case":["CASE WHEN UltimoCambio IS NULL THEN GETDATE() ELSE UltimoCambio END","CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END","CASE WHEN UltimoCambio IS NULL THEN GETDATE() ELSE UltimoCambio END","CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END","CASE WHEN UltimoCambio IS NULL THEN @FechaRegistro ELSE UltimoCambio END","CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END","CASE WHEN UltimoCambio IS NULL THEN GETDATE() ELSE UltimoCambio END","CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END","CASE WHEN UltimoCambio IS NULL THEN GETDATE() ELSE UltimoCambio END","CASE WHEN @Estatus<>@EstatusNuevo THEN NULL ELSE Situacion END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @EstatusNuevo = 'CANCELADO' SELECT @FechaCancelacion = @FechaRegistro ELSE SELECT @FechaCancelacion = NULL","IF @EstatusNuevo <> 'CANCELADO' SELECT @FechaConclusion  = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spTMAReacomodoSolicitar.StoredProcedure.sql",
+
+"case":["CASE @ArticuloEsp WHEN NULL THEN SUM(d.Disponible) - @CantidadTarima - @Ordenes ELSE 0 END","CASE @ArticuloEsp WHEN NULL THEN NULL ELSE 'Patinero - Domicilio con Existencia Incorrecta' END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spValeAfectar.StoredProcedure.sql",
+
+"case":["CASE WHEN Cliente IS NULL THEN 'DISPONIBLE' ELSE 'CIRCULACION' END","CASE WHEN Cliente IS NULL THEN 'DISPONIBLE' ELSE 'CIRCULACION' END","CASE WHEN UltimoCambio IS NULL THEN */@FechaRegistro /*ELSE UltimoCambio END","CASE WHEN @Estatus <> @EstatusNuevo THEN NULL ELSE Situacion END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":["IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = 80030 SELECT @Ok = NULL","IF @Ok = NULL","IF @EstatusNuevo = 'CANCELADO' SELECT @FechaCancelacion = @FechaRegistro ELSE SELECT @FechaCancelacion = NULL","IF @EstatusNuevo <> 'CANCELADO' SELECT @FechaConclusion  = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spValidarClavePresupuestalCalc.StoredProcedure.sql",
+
+"case":["CASE WHEN @Concatenacion IS NULL THEN CONVERT(varchar,@Caracter) ELSE CONVERT(varchar, @Concatenacion) + CONVERT(varchar,@Caracter) END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spVentaCteDComponentes.StoredProcedure.sql",
+
+"case":["CASE WHEN @MovTipo IN ('VTAS.D', 'VTAS.DF', 'VTAS.SD', 'VTAS.DFC') THEN Costo ELSE NULL END, ContUso, CASE WHEN @CopiarAplicacion = 0 THEN NULL ELSE Aplica END, CASE WHEN @CopiarAplicacion = 0 THEN NULL ELSE AplicaID END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spVerAcumulados.StoredProcedure.sql",
+
+"case":["CASE @GrupoBase  WHEN NULL THEN Grupo     ELSE @GrupoBase  END","CASE @CuentaBase WHEN NULL THEN Cuenta    ELSE @CuentaBase END","CASE @Ejercicio  WHEN NULL THEN Ejercicio ELSE @Ejercicio  END","CASE @GrupoBase  WHEN NULL THEN Grupo     ELSE @GrupoBase  END","CASE @CuentaBase WHEN NULL THEN Cuenta    ELSE @CuentaBase END","CASE @Ejercicio  WHEN NULL THEN Ejercicio ELSE @Ejercicio  END","CASE @GrupoBase  WHEN NULL THEN Grupo     ELSE @GrupoBase  END","CASE @CuentaBase WHEN NULL THEN Cuenta    ELSE @CuentaBase END","CASE @Ejercicio  WHEN NULL THEN Ejercicio ELSE @Ejercicio  END","CASE @GrupoBase  WHEN NULL THEN Grupo     ELSE @GrupoBase  END","CASE @CuentaBase WHEN NULL THEN Cuenta    ELSE @CuentaBase END","CASE @Ejercicio  WHEN NULL THEN Ejercicio ELSE @Ejercicio  END","CASE @GrupoBase  WHEN NULL THEN Grupo     ELSE @GrupoBase  END","CASE @CuentaBase WHEN NULL THEN Cuenta    ELSE @CuentaBase END","CASE @Ejercicio  WHEN NULL THEN Ejercicio ELSE @Ejercicio  END"],
+
+"compare":{"where":null,"and":["AND @VerGrupo = 0 SELECT @Grupo = NULL"],"or":null,"if":["IF UPPER(@GrupoBase) = NULL","IF @Grupo = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spVerEjercicio.StoredProcedure.sql",
+
+"case":["CASE @GrupoBase  WHEN NULL THEN Grupo     ELSE @GrupoBase  END","CASE @CuentaBase WHEN NULL THEN Cuenta    ELSE @CuentaBase END","CASE @Ejercicio  WHEN NULL THEN Ejercicio ELSE @Ejercicio  END","CASE @GrupoBase  WHEN NULL THEN Grupo     ELSE @GrupoBase  END","CASE @CuentaBase WHEN NULL THEN Cuenta    ELSE @CuentaBase END","CASE @Ejercicio  WHEN NULL THEN Ejercicio ELSE @Ejercicio  END","CASE @GrupoBase  WHEN NULL THEN Grupo     ELSE @GrupoBase  END","CASE @CuentaBase WHEN NULL THEN Cuenta    ELSE @CuentaBase END","CASE @Ejercicio  WHEN NULL THEN Ejercicio ELSE @Ejercicio  END","CASE @GrupoBase  WHEN NULL THEN Grupo     ELSE @GrupoBase  END","CASE @CuentaBase WHEN NULL THEN Cuenta    ELSE @CuentaBase END","CASE @Ejercicio  WHEN NULL THEN Ejercicio ELSE @Ejercicio  END"],
+
+"compare":{"where":null,"and":["AND @VerGrupo = 0 SELECT @Grupo = NULL","AND @VerCuenta = 0 SELECT @Cuenta = NULL"],"or":null,"if":["IF @GrupoBase = '0' SELECT @GrupoBase = NULL","IF @CuentaBase = '0' SELECT @CuentaBase = NULL","IF UPPER(@GrupoBase) = NULL","IF UPPER(@CuentaBase) = NULL","IF @Grupo = NULL","IF @Cuenta = NULL"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spWebArtGenerarCombinaciones.StoredProcedure.sql",
+
+"case":["CASE WHEN @TipoOpcion = 'Si' THEN dbo.fnWebOrdenarSubCuenta(@SubCuenta)ELSE NULL END","CASE WHEN @TipoOpcion = 'Si' THEN @Articulo ELSE NULL END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SPWebPaginaComunidad.StoredProcedure.sql",
+
+"case":["CASE  WHEN Calificacion IS NULL THEN 0 ELSE Calificacion END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SP_DM0235Corregirident.StoredProcedure.sql",
+
+"case":["Case When observaciones like 'Saldo Remanente%' OR Observaciones='Dispersar entero' Then CV Else Null End"],
+
+"compare":{"where":null,"and":null,"or":["OR Observaciones='Dispersar entero' Then CV Else Null End, Ejercicio=Null"],"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.sp_FormatoINTFMAVI.StoredProcedure.sql",
+
+"case":["CASE WHEN ISNULL(D.calificacion,0) > 0 AND D.SaldoVencido = '000000000' AND D.SaldoFactura IS NULL THEN '01' ELSE MOP END","CASE WHEN ISNULL(calificacion,'') IN ('','01') AND SaldoVencido <> '000000000'  AND SaldoFactura IS NULL THEN '02' ELSE MOP END","CASE WHEN SaldoFactura IS NULL AND SaldoVencido  <> '000000000' AND Mop='01' THEN '02' ELSE MOP END","CASE WHEN SaldoFactura IS NOT NULL THEN '01' ELSE MOP END","Case When E.FechaUltAbono is null Then '1408'+Replace(CONVERT(varchar,E.FechaEmision,103),'/','') else ISNULL(E.FechaUltAbono,'') End","CASE WHEN E.FechaUltAbono IS NULL THEN '4500' ELSE '4509'+E.ImpUltPago END","case when cxc.clienteenviara is null then factctainc.ClienteEnviarA else cxc.clienteenviara end","Case When EI.FechaUltAbono is null Then '1408'+Replace(CONVERT(varchar,EI.FechaEmision,103),'/','')  else ISNULL(EI.FechaUltAbono,'') End","CASE WHEN EI.FechaUltAbono IS NULL THEN '4500' ELSE '4509'+EI.ImpUltPago END","CASE WHEN B.FechaUltimoPago IS NULL THEN '' ELSE '4509'+dbo.FN_BuroImporteUltPago(C.Cliente, C.Mov, C.MovID, @fechareporte) END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SP_MaviDM0104B_HistoricoCXC.StoredProcedure.sql",
+
+"case":["CASE WHEN INCO.MOV IS NOT NULL THEN 1 ELSE 0 END","Case When Co.Importe is not  null  then Co.Importe else 0 End","CASE WHEN INC.PadreMavi IS NOT NULL THEN 1 ELSE 0 END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SP_MaviDM0196AsignaciondeAvales.StoredProcedure.sql",
+
+"case":["case when (nivelcobranzaespecialcontactoa<>''or nivelcobranzaespecialcontactoa<>null)and contactoselectaval=1  then (dbo.FN_RM0196NivelEspecial(mav.cliente,cto.id))else mav.nivelcobranza end","case when (nivelcobranzaespecialcontactoa<>''or nivelcobranzaespecialcontactoa<>null)and contactoselectaval=1 and mav.idaval=cto.id  then (dbo.FN_RM0196NivelAgente(cto.nivelcobranzaespecialcontactoa))else mav.agentecobrador end"],
+
+"compare":{"where":null,"and":null,"or":["or nivelcobranzaespecialcontactoa<>null","or nivelcobranzaespecialcontactoa<>null"],"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SP_MaviEdoCuentaProv.StoredProcedure.sql",
+
+"case":["Case When Aux.Mov = ''Solicitud Cheque'' Then NULL Else Aux.MovId End","Case When AP.Aplica Is NULL Then A.Aplica Else AP.Aplica End","Case When AP.AplicaID Is NULL Then A.AplicaID Else AP.AplicaID End","Case When AP.Aplica Is NULL Then A.Aplica+'' ''+A.AplicaID Else AP.Aplica+'' ''+AP.AplicaID End","Case When AP.Aplica Is NULL Then A.Aplica Else AP.Aplica End","Case When MF3.OMov Is NULL Then MF2.OMov+'' ''+MF2.OMovID Else MF3.OMov+'' ''+MF3.OMovID End"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SP_MaviEdoCuentaProv2.StoredProcedure.sql",
+
+"case":["Case When Aux.Mov = ''Solicitud Cheque'' Then NULL Else Aux.MovId End","Case When AP.Aplica Is NULL Then A.Aplica Else AP.Aplica End","Case When AP.AplicaID Is NULL Then A.AplicaID Else AP.AplicaID End","Case When AP.Aplica Is NULL Then A.Aplica+'' ''+A.AplicaID Else AP.Aplica+'' ''+AP.AplicaID End","Case When AP.Aplica Is NULL Then A.Aplica Else AP.Aplica End","Case When MF3.OMov Is NULL Then MF2.OMov+'' ''+MF2.OMovID Else MF3.OMov+'' ''+MF3.OMovID End"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SP_MaviPersonalVtasSuc.StoredProcedure.sql",
+
+"case":["Case When T1.Personal is NULL Then 1 Else 0 End","Case When T1.Personal is NULL Then 0 Else 1 End","Case Z.Plaza When NULL Then 0 Else 1 End","Case When Rota.Rotativo is Not NULL And P.SucursalTrabajo = 99 Then 1 Else 0 End","Case Z.Plaza When NULL Then 0 Else 1 End","Case When Rota.Rotativo is Not NULL And P.SucursalTrabajo = 99 Then 1 Else 0 End"],
+
+"compare":{"where":["Where Evaluacion = Null","Where Evaluacion = Null"],"and":["And Cso.Curso = NULL","And Cso.Curso = NULL","And Cso.Curso <> Null","And Cso.Curso = NULL","And Cso.Curso = NULL","And Cso.Curso <> Null"],"or":["or Z.Plaza <> NULL","or Z.Plaza <> NULL"],"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SP_MAVIRM0074VehicWeb.StoredProcedure.sql",
+
+"case":["CASE WHEN ISNULL(PD.TipoCombustible,'') = 'DIESEL' THEN PD.CapacidadTanque ELSE NULL END","CASE WHEN CHARINDEX('GASOLINA',ISNULL(PD.TipoCombustible,''),0) != 0 THEN PD.CapacidadTanque ELSE NULL END","CASE WHEN ISNULL(T.Vehiculo,'') != '' THEN CAST(V.Vehiculo2 AS INT) ELSE NULL END","CASE WHEN ISNULL(T.Division,'') != '' THEN CAST(D.Division2 AS INT) ELSE NULL END","CASE WHEN ISNULL(T.Celula,'') != '' THEN 'Celula ' + CAST(CAST(C.Celula2 AS INT) AS VARCHAR) ELSE NULL END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SP_MaviRM0217ConcentradoAcuerdoProveedor.StoredProcedure.sql",
+
+"case":["Case When Aplic.Estatus='CONCLUIDO' or Aplic.FechaConclusion is null Then 0 Else Datediff(D,GetDate(),Isnull(Aplic.Vencimiento,0))End"],
+
+"compare":{"where":null,"and":null,"or":["Or @DVI=null","Or @DVF=null"],"if":["If @DVI='' Or @DVI=null","If @DVF='' Or @DVF=null"]}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SP_MAVIRM0422ReimpresionSupervisiones.StoredProcedure.sql",
+
+"case":["CASE WHEN MS2.ctoDelegacion is NOT NULL THEN null ELSE MS.EntreCalles end"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SP_MAVIRM0851AnalitxCptoCom.StoredProcedure.sql",
+
+"case":["CASE WHEN D.Financiamiento IS NULL OR D.Financiamiento = 0.0 THEN C.Importe ELSE V.Importe-D.Financiamiento END","CASE WHEN Cob.origen IN ('Prestamo Personal','Credilana','Refinanciamiento') THEN SUM(Cob.capital) ELSE NULL END","CASE WHEN C.Mov = 'React Incobrable NV' THEN (CD.Importe*CNV.PorcFin)/100 ELSE NULL END","CASE WHEN C.Mov = 'React Incobrable NV' THEN CD.Importe - ( (CD.Importe*CNV.PorcFin)/100 ) ELSE NULL END","CASE WHEN C.Mov = 'Cta Incobrable NV' THEN ((C.Importe + C.Impuestos)*CNV.PorcFin)/100 ELSE NULL END","CASE WHEN C.Mov = 'Cta Incobrable NV' THEN (C.Importe + C.Impuestos) - ( ((C.Importe + C.Impuestos)*CNV.PorcFin)/100 ) ELSE NULL END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SP_ResumenCtasBalanceContable.StoredProcedure.sql",
+
+"case":["Case When #GtosCompRep201.ID Is Not Null Then #GtosCompRep201.Importe Else IsNull(A.Haber,0) End"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SP_ResumenCtasBalanceOperativo.StoredProcedure.sql",
+
+"case":["Case When C.Mov = 'Neteo' Then Null Else IsNull(C.Concepto,'') End","Case When C.Mov = 'Neteo' Then Null Else IsNull(C.Concepto,'') End"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SP_RM1070AnaliticoCtasResulOpe.StoredProcedure.sql",
+
+"case":["Case    When IsNull(CE.Valor,'') <> '' Then Cast(Right(CE.Valor,CharIndex('_',Reverse(CE.Valor),0)-1) As Int) Else Null End","Case    When IsNull(CE.Valor,'') <> '' Then Cast(Right(CE.Valor,CharIndex('_',Reverse(CE.Valor),0)-1) As Int) Else Null End"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SP_RM1076AnaliticoCtasBalanceOpe.StoredProcedure.sql",
+
+"case":["Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End","Case When @Concepto='SIN CASO' or @Concepto=' SIN CASO' then null Else @Concepto End"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SP_RM1077AnaliticoCtasBalanceConta.StoredProcedure.sql",
+
+"case":["Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When #GtosCompRep201.ID Is Not Null Then #GtosCompRep201.Importe Else IsNull(A.Haber,0) End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End","Case When @Concepto='SIN CASO' Then null Else @Concepto End"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SP_RM1109ValidacionEnvioCobro.StoredProcedure.sql",
+
+"case":["CASE WHEN CI.Instituciones IS Not NULL THEN 1 ELSE 0 END","CASE WHEN IMPORTEVALIDACION IS NOT NULL THEN 'SI' ELSE'NO' END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.SP_RM1143Concentradora.StoredProcedure.sql",
+
+"case":["Case When Renglon Is Null Then ImpteEnc Else ImpteDet / @FactorDesgloseIva End","Case\tWhen IsNull(CE.Valor,'') <> '' Then Cast(Right(CE.Valor,CharIndex('_',Reverse(CE.Valor),0)-1) As Int) Else Null End","Case When GDC.ContUso IS Not Null Then GDC.ContUso Else D.ContUso end","Case When GDC.ContUso IS Not Null Then GDC.ContUso Else D.ContUso End","Case When gdC.ContUso IS Not Null Then gdC.ContUso Else D.ContUso end","Case When SI.CC Is Null Then SI.Sucursales Else 39 End","Case When CharIndex('_',Valor,1) > 0 Then Left(Valor,CharIndex('_', Valor, 1)-1) Else Null End","Case When CharIndex('_',Valor,1) > 0 Then Substring(Valor, CharIndex('_', Valor, 1) + 1, 100) Else Null End"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.VentasNetasJob.StoredProcedure.sql",
+
+"case":["Case When Vm.Mov = 'Factura Mayoreo' And IsNull(Vm.AgenteServicio,'') <> '' Then Vm.AgenteServicio Else Null End","Case When V2.Mov = 'Factura Mayoreo' And IsNull(V2.AgenteServicio,'') <> '' Then V2.AgenteServicio Else Null End","Case When CC.Mov is Null Then '99999' Else CC.MovId End","Case When Vm.Mov = 'Devolucion Mayoreo' And IsNull(Vm.AgenteServicio,'') <> '' Then Vm.AgenteServicio Else Null End"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.VentasNetasJobSR.StoredProcedure.sql",
+
+"case":["Case When Vm.Mov = 'Factura Mayoreo' And IsNull(Vm.AgenteServicio,'') <> '' Then Vm.AgenteServicio Else Null End","Case When V2.Mov = 'Factura Mayoreo' And IsNull(V2.AgenteServicio,'') <> '' Then V2.AgenteServicio Else Null End","Case When CC.Mov is Null Then '99999' Else CC.MovId End","Case When Vm.Mov = 'Devolucion Mayoreo' And IsNull(Vm.AgenteServicio,'') <> '' Then Vm.AgenteServicio Else Null End"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.VentaUtil.View.sql",
+
+"case":["CASE WHEN m.Clave = 'VTAS.B' THEN NULL ELSE sum(ROUND(Convert(money, d.Cantidad*ISNULL(d.Costo, 0.0)), v.RedondeoMonetarios)) END"],
+
+"compare":{"where":null,"and":["AND\r\n(f.OrigenTipo = NULL"],"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.V_MaviVentasNetas2.View.sql",
+
+"case":["Case When CC.SucursalOrigen Is Null Then V2.SucursalVenta Else CC.SucursalOrigen End","Case When CC.Condicion Is Null Then Vm.Condicion Else CC.Condicion End","Case When CC.FechaEmision Is Not Null Then CC.FechaEmision Else Vm.FechaRequerida End","Case When CC.FechaEmision Is Null Then Vm.FechaRequerida Else CC.FechaEmision End"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.V_MaviVtaNetaCmpltoDev.View.sql",
+
+"case":["Case When CC.SucursalOrigen Is Null Then V2.SucursalVenta Else CC.SucursalOrigen End","Case When CC.Condicion Is Null Then Vm.Condicion Else CC.Condicion End","Case When CC.FechaEmision Is Not Null Then CC.FechaEmision Else Vm.FechaRequerida End","Case When CC.FechaEmision Is Null Then Vm.FechaRequerida Else CC.FechaEmision End"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.xpCFDComplemento.StoredProcedure.sql",
+
+"case":["CASE ISNULL(Empresa.TipoOperacion, '') WHEN 'Exportación' THEN '2' WHEN 'Exportación de Servicios' THEN 'A' ELSE NULL END","CASE ISNULL(Empresa.TipoOperacion, '') WHEN 'Exportación de Servicios' THEN NULL ELSE CASE ISNULL(Empresa.ClavePedimento,'') WHEN '' THEN NULL ELSE SATClavePedimento.Clave END END","CASE ISNULL(Empresa.TipoOperacion, '') WHEN 'Exportación de Servicios' THEN NULL ELSE CASE ISNULL(Empresa.CertificadoOrigen,'') WHEN 'Funge como Certificado de Origen' THEN '1' WHEN 'No Funge como Certificado de Origen' THEN '0' ELSE NULL END END","CASE ISNULL(Empresa.TipoOperacion, '') WHEN 'Exportación de Servicios' THEN NULL ELSE CASE ISNULL(Empresa.CertificadoOrigen,'') WHEN 'No Funge como Certificado de Origen' THEN NULL ELSE CASE ISNULL(Empresa.NumCertificadoOrigen,'') WHEN '' THEN NULL ELSE Empresa.NumCertificadoOrigen END END","CASE ISNULL(Empresa.TipoOperacion, '') WHEN 'Exportación de Servicios' THEN NULL ELSE CASE ISNULL(Empresa.NumeroExportadorConfiable,'') WHEN '' THEN NULL ELSE Empresa.NumeroExportadorConfiable END END","CASE ISNULL(Empresa.TipoOperacion, '') WHEN 'Exportación de Servicios' THEN NULL ELSE CASE ISNULL(vcfd.Incoterm,'') WHEN '' THEN NULL ELSE vcfd.Incoterm END END","CASE ISNULL(Empresa.TipoOperacion, '') WHEN 'Exportación de Servicios' THEN NULL ELSE CASE ISNULL(vcfd.Subdivision,'') WHEN 'No tiene subdivisión' THEN '0' WHEN 'Si tiene subdivisión' THEN '1' ELSE NULL END END","CASE ISNULL(Empresa.TipoOperacion, '') WHEN 'Exportación de Servicios' THEN NULL ELSE CASE ISNULL(Mon.Clave,'') WHEN 'USD' THEN Mon.TipoCambio ELSE dbo.fnMonTipoCambioUSD(Mon.Moneda) END END","CASE ISNULL(DestinatarioCFD.NumRegIdTrib,'') WHEN '' THEN Destinatario.RFC ELSE NULL END","CASE LEN(@EmpresaRFC) WHEN 12 THEN NULL ELSE RepresentanteCURP END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.xpMESSaldoU.StoredProcedure.sql",
+
+"case":["CASE @Mov WHEN 'Entrada Produccion' THEN 5 WHEN 'Consumo Produccion' THEN 5 ELSE NULL END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}
+
+{"file":"C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.xpPOSConcatenaTicket.StoredProcedure.sql",
+
+"case":["CASE WHEN @ImporteRef IS NOT NULL THEN '  $ '+ STUFF(dbo.fnFormatoMoneda( @ImporteCobrado,@Empresa),1,1,'') + ' ' + @Moneda ELSE '' END","CASE WHEN @ImporteRef IS NOT NULL THEN '  $ ' + STUFF(dbo.fnFormatoMoneda( @ImporteRef,@Empresa),1,1,'') + ' ' + @POSMoneda ELSE '' END","CASE WHEN @ImporteRef IS NOT NULL THEN '  $ '+ STUFF(dbo.fnFormatoMoneda( @ImporteCobrado,@Empresa),1,1,'') + ' ' + @Moneda ELSE '' END"],
+
+"compare":{"where":null,"and":null,"or":null,"if":null}}]
