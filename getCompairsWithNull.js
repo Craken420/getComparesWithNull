@@ -2,7 +2,22 @@ const fs = require('fs')
 const path = require('path')
 const R = require('ramda')
 
-const { DrkBx } = require('./DarkBox')
+const DrkBx = {
+    files: {
+        recode: R.curry( (cod, file) => iconvlite.decode( fs.readFileSync(file), cod) )
+    },
+    dir: {
+        conctDirIsFile: R.pipe(
+            conctRoot,
+            R.filter( file => fs.statSync(file).isFile() )
+        ),
+        getFiltFilesAndOmit: R.curry( (dir, ext, namesOmit) => R.without(
+            namesOmit,
+            chekAndGetFiltFls(dir, ext)
+        )
+    )
+    }
+}
 
 const getCase = R.pipe(
     R.match(/\bcase\b.*?(\bwhen\b.*?\bthen\b.*?)+?\belse\b.*?(\bcase\b.*?(\bwhen\b.*?\bthen\b.*?)+?\belse\b.*?\bend\b.*?)\bend\b|\bcase\b.*?(\bwhen\b.*?\bthen\b.*?)+?\belse\b.*?\bend\b/gi),
@@ -11,26 +26,12 @@ const getCase = R.pipe(
 
 const getCompare = txt => {
     if (/(?<!(select|set).*?)=([\s\n]|)\bnull\b/gi.test(txt)) {
-        // return txt.match(
-        //     /(\bwhere\b|\band\b|\bor\b|\bif\b)(|\s+)(@|)(\w+((\.|_|-)\w+|))*(|\s+)(=|<>|>|<|>=|<=|!=|!<|!>)(\s+|\s+\n+|)\bnull\b/gi
-        // )
-        // return txt.match(
-        //     /(\bwhere\b((\s+|\n+|\s+\n+|)(?!.*?\bwhere\b).*?)*?|\bif\b((\n+|)(?!.*?\bif\b).*?)*?|\band\b((\n+|)(?!.*?\band\b).*?)*?|\bor\b((\n+|)(?!.*?\bor\b).*?)*?)(=|<>|>|<|>=|<=|!=|!<|!>)(\s+|\n+|\s+\n+|)\bnull\b/gi
-        // )
-        
         return {
             where: txt.match(/\bwhere\b((\s+|\n+|\s+\n+|)(?!.*?\bwhere\b)).*?(=|<>|>|<|>=|<=|!=|!<|!>)(\s+|\n+|\s+\n+|)\bnull\b/gi),
             and: txt.match(/\band\b((\s+|\n+|\s+\n+|)(?!.*?\band\b)).*?(=|<>|>|<|>=|<=|!=|!<|!>)(\s+|\n+|\s+\n+|)\bnull\b/gi),
             or: txt.match(/\bor\b((\s+|\n+|\s+\n+|)(?!.*?\bor\b)).*?(=|<>|>|<|>=|<=|!=|!<|!>)(\s+|\n+|\s+\n+|)\bnull\b/gi),
             if: txt.match(/\bif\b((\s+|\n+|\s+\n+|)(?!.*?\bif\b)).*?(=|<>|>|<|>=|<=|!=|!<|!>)(\s+|\n+|\s+\n+|)\bnull\b/gi)
         }
-
-        // return {
-        //     where: txt.match(/where(?:[^where]|\b(w(?!here)|wh(?!ere)|whe(?!re)|wher(?!e)|(?<!w)here|(?<!wh)ere|(?<!whe)re|(?<!wher)e)\b)*?=([\s\n]|)\bnull\b/gi),
-        //     and: txt.match(/and(?:[^and]|\b(a(?!nd)|an(?!d)|(?<!a)nd|(?<!an)d)\b)*?=([\s\n]|)\bnull\b/gi),
-        //     or: txt.match(/or(?:[^or]|\b(o(?!r)|(?<!o)r)\b)*?=([\s\n]|)\bnull\b/gi),
-        //     if: txt.match(/if(?:[^if]|\b(i(?!f)|(?<!i)f)\b)*?=([\s\n]|)\bnull\b/gi)
-        // }
     } else {
         return []
     }
@@ -70,10 +71,6 @@ const edit = R.curry( (coding, file) => {
     }
     else {
         console.log('Hasn´t have \"= NULL\": ',path.basename(file))
-        // return {
-        //     file: file,
-        //     status: 'Hasn´t have \"= NULL\"'
-        // }
         return false
     }
 })
@@ -100,9 +97,8 @@ const runTheseFiles = R.pipe(
 )
 
 /* Usage */
-const objsSQL3100 = 'C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL3100\\'
-const objsSQL5000 = 'C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\'
-// const dirOrig = 'C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\Intelisis5000\\Codigo Original\\'
+const objsSQL3100 = 'C:\\ObjsSQL\\SQL3100\\'
+const objsSQL5000 = 'C:\\ObjsSQL\\SQL5000\\'
 
 /* Folder and extentions of the files */
 fs.writeFileSync(
@@ -115,12 +111,7 @@ fs.writeFileSync(
                 ['.sql','.vis','.frm','.esp','.tbl','.rep','.dlg'],
                 objsSQL5000,
                 [
-                    'C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL3100\\dbo.spCrearJobsJasperTrabajo.StoredProcedure.sql',
-                    // 'C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCrearJobsJasperTrabajo.StoredProcedure.sql',
-                    // 'C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCorteCrearJobs.StoredProcedure.sql',
-                    // 'C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCrearJobsSincroISTrabajo.StoredProcedure.sql',
-                    // 'C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.speDocINCrearJobs.StoredProcedure.sql'
-                
+                    'C:\\ObjsSQL\\SQL3100\\dbo.spCrearJobsJasperTrabajo.StoredProcedure.sql',
                 ]
             )
         )
@@ -136,12 +127,8 @@ fs.writeFileSync(
 //             ['.sql','.vis','.frm','.esp','.tbl','.rep','.dlg'],
 //             objsSQL5000,
 //             [
-//                 'C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL3100\\dbo.spCrearJobsJasperTrabajo.StoredProcedure.sql',
-//                 'C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCrearJobsJasperTrabajo.StoredProcedure.sql',
-//                 'C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCorteCrearJobs.StoredProcedure.sql',
-//                 'C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.spCrearJobsSincroISTrabajo.StoredProcedure.sql',
-//                 'C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\ObjsSQL\\SQL5000\\dbo.speDocINCrearJobs.StoredProcedure.sql'
-            
+//                 'C:\\ObjsSQL\\SQL3100\\dbo.spCrearJobsJasperTrabajo.StoredProcedure.sql',
+//                 'C:\\ObjsSQL\\SQL5000\\dbo.spCrearJobsJasperTrabajo.StoredProcedure.sql',
 //             ]
 //         )
 //     )
@@ -167,5 +154,5 @@ module.exports.equalsNull = {
 // )
 
 /* One file */
-// console.log(runFile('C:\\Users\\lapena\\Documents\\Luis Angel\\Sección Mavi\\Intelisis\\Intelisis5000\\Reportes MAVI\\ContSATComprobanteFaltante.frm'))
+// console.log(runFile('C:\\ContSATComprobanteFaltante.frm'))
 // console.log(runFile('Testing\\dbo.AjusteAnual.StoredProcedure.sql'))
